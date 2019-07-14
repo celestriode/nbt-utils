@@ -1,5 +1,7 @@
 <?php namespace Celestriode\NbtUtils\Nbt;
 
+use Celestriode\NbtUtils\Exception\NbtFormatException;
+
 class FloatTag extends AbstractNumberTag
 {
     /**
@@ -12,7 +14,7 @@ class FloatTag extends AbstractNumberTag
     {
         if (!is_numeric($value)) {
 
-            throw new \InvalidArgumentException('Value must be numeric');
+            throw new NbtFormatException('Value must be numeric');
         }
 
         return (float)$value;

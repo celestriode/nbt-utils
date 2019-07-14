@@ -14,7 +14,7 @@ class LongTag extends AbstractNumberTag
     {
         if (!is_numeric($value)) {
 
-            throw new \InvalidArgumentException('Value must be numeric');
+            throw new NbtFormatException('Value must be numeric');
         }
 
         if (bccomp($value, '9223372036854775807', 0) === 1 || bccomp('-9223372036854775808', $value, 0) === 1) { // TODO: make sure this works

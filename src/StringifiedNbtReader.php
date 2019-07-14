@@ -20,13 +20,13 @@ use Celestriode\NbtUtils\Nbt\TagUtils;
 
 class StringifiedNbtReader
 {
-    const PATTERN_DOUBLE_IMPLICIT = '/[-+]?(?:[0-9]+[.]|[0-9]*[.][0-9]+)(?:e[-+]?[0-9]+)?/i';
-    const PATTERN_DOUBLE_EXPLICIT = '/[-+]?(?:[0-9]+[.]?|[0-9]*[.][0-9]+)(?:e[-+]?[0-9]+)?d/i';
-    const PATTERN_FLOAT = '/[-+]?(?:[0-9]+[.]?|[0-9]*[.][0-9]+)(?:e[-+]?[0-9]+)?f/i';
-    const PATTERN_BYTE = '/[-+]?(?:0|[1-9][0-9]*)b/i';
-    const PATTERN_LONG = '/[-+]?(?:0|[1-9][0-9]*)l/i';
-    const PATTERN_SHORT = '/[-+]?(?:0|[1-9][0-9]*)s/i';
-    const PATTERN_INT = '/[-+]?(?:0|[1-9][0-9]*)/';
+    const PATTERN_DOUBLE_IMPLICIT = '/^[-+]?(?:[0-9]+[.]|[0-9]*[.][0-9]+)(?:e[-+]?[0-9]+)?$/i';
+    const PATTERN_DOUBLE_EXPLICIT = '/^[-+]?(?:[0-9]+[.]?|[0-9]*[.][0-9]+)(?:e[-+]?[0-9]+)?d$/i';
+    const PATTERN_FLOAT = '/^[-+]?(?:[0-9]+[.]?|[0-9]*[.][0-9]+)(?:e[-+]?[0-9]+)?f$/i';
+    const PATTERN_BYTE = '/^[-+]?(?:0|[1-9][0-9]*)b$/i';
+    const PATTERN_LONG = '/^[-+]?(?:0|[1-9][0-9]*)l$/i';
+    const PATTERN_SHORT = '/^[-+]?(?:0|[1-9][0-9]*)s$/i';
+    const PATTERN_INT = '/^[-+]?(?:0|[1-9][0-9]*)$/';
 
     const COMPOUND_OPEN = '{';
     const COMPOUND_CLOSE = '}';

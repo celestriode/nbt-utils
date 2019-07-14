@@ -1,5 +1,7 @@
 <?php namespace Celestriode\NbtUtils\Nbt;
 
+use Celestriode\NbtUtils\Exception\NbtUtilsException;
+
 final class TagUtils
 {
     public static function createTag(int $type): TagInterface
@@ -32,14 +34,14 @@ final class TagUtils
             case TagInterface::TAG_LONG_ARRAY:
                 return new LongArrayTag();
             default:
-                throw \InvalidArgumentException('Unknown NBT type: ' . $type);
+                throw new NbtUtilsException('Unknown NBT type: ' . $type);
         }
     }
 
     public static function convertToString(int $type): string
     {
         switch($type) {
-            case TagInterface::TAG_END0:
+            case TagInterface::TAG_END:
                 return "TAG_End";
             case TagInterface::TAG_BYTE:
                 return "TAG_Byte";
@@ -69,7 +71,6 @@ final class TagUtils
                 return "Any Numeric Tag";
             default:
                 return "UNKNOWN";
-            }
         }
     }
 }

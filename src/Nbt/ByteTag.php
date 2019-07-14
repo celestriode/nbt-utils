@@ -14,7 +14,7 @@ class ByteTag extends AbstractNumberTag
     {
         if (!is_numeric($value)) {
 
-            throw new \InvalidArgumentException('Value must be numeric');
+            throw new NbtFormatException('Value must be numeric');
         }
 
         $value = (int)$value;

@@ -15,5 +15,9 @@
     "require-dev": {
         "phpunit/phpunit": "^8.2"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "require": {
+        "php": "^7.0",
+        "celestriode/captain": "^0.0.7-beta"
+    }
 }

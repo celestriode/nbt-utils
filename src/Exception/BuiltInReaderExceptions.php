@@ -53,4 +53,9 @@ final class BuiltInReaderExceptions
             }
         });
 	}
+
+	public function invalidNode(): SimpleCommandExceptionType
+    {
+        return SimpleCommandExceptionType::createWithLiteral('Invalid node.');
+    }
 }

@@ -17,7 +17,8 @@
     },
     "license": "MIT",
     "require": {
-        "php": "^7.0",
-        "celestriode/captain": "^0.0.7-beta"
+        "php": "^7.1",
+        "celestriode/captain": "^0.0.7-beta",
+        "ext-mbstring": "*"
     }
 }
